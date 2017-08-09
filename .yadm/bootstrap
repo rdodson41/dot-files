@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew bundle --global
+
+# Install Vim Plugin Manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim '+PlugClean' '+PlugUpdate' '+quitall'
+
+# Install tmux Plugin Manager
+rm -rf ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Install Ruby Version Manager
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -sSL https://get.rvm.io | bash -s stable
+
+# Install Node.js Version Manager
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash

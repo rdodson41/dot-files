@@ -20,6 +20,10 @@ if [[ -f "${HOME}/.nvm/nvm.sh" ]]; then
   source "${HOME}/.nvm/nvm.sh"
 fi
 
+if [[ -f "$NVM_DIR/bash_completion" ]]; then
+  source "$NVM_DIR/bash_completion"
+fi
+
 if [[ -f "${HOME}/.rvm/scripts/rvm" ]]; then
   source "${HOME}/.rvm/scripts/rvm"
 fi
