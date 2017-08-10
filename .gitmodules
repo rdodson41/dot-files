@@ -1,3 +1,9 @@
 [submodule ".ssh"]
 	path = .ssh
 	url = https://rdodson41@bitbucket.org/rdodson41/.ssh.git
+[submodule ".gnupg"]
+	path = .gnupg
+	url = https://rdodson41@bitbucket.org/rdodson41/.gnupg.git
+[submodule ".password-store"]
+	path = .password-store
+	url = https://rdodson41@bitbucket.org/rdodson41/.password-store.git
