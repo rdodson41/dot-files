@@ -1,9 +1,12 @@
 [submodule ".ssh"]
 	path = .ssh
 	url = https://rdodson41@bitbucket.org/rdodson41/.ssh.git
+	branch = master
 [submodule ".gnupg"]
 	path = .gnupg
 	url = https://rdodson41@bitbucket.org/rdodson41/.gnupg.git
+	branch = master
 [submodule ".password-store"]
 	path = .password-store
 	url = https://rdodson41@bitbucket.org/rdodson41/.password-store.git
+	branch = master
