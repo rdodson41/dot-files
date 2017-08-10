@@ -4,6 +4,7 @@ set -e
 
 # Install submodules
 yadm submodule update --init
+yadm remote set-url origin git@github.com:rdodson41/dot-files.git
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
