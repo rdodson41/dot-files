@@ -12,6 +12,8 @@ set scrolloff=8
 set title
 set cursorline
 set number
+set textwidth=80
+set colorcolumn=+1
 set showmode
 set showcmd
 set ruler
