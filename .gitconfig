@@ -15,11 +15,6 @@
 	ds        = diff --staged
 	l         = log --graph --oneline --max-count=10
 	la        = log --graph --oneline
-	ld        = log --graph --oneline --decorate --max-count=10
-	lda       = log --graph --oneline --decorate
-	ldl       = log --graph --oneline --decorate --max-count=40
-	ldm       = log --graph --oneline --decorate --max-count=20
-	lds       = log --graph --oneline --decorate --max-count=10
 	ll        = log --graph --oneline --max-count=40
 	lm        = log --graph --oneline --max-count=20
 	ls        = log --graph --oneline --max-count=10
