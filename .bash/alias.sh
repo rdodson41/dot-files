@@ -21,6 +21,7 @@ alias zgrep="zgrep --color=auto"
 alias zegrep="zegrep --color=auto"
 alias zfgrep="zfgrep --color=auto"
 
+alias env-vim="env | grep ^VIM | sort"
 alias env-ssh="env | grep ^SSH | sort"
 alias env-gpg="env | grep ^GPG | sort"
 alias env-gem="env | grep ^GEM | sort"
