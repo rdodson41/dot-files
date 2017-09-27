@@ -38,6 +38,8 @@ alias bi="bundle install"
 alias bu="bundle update"
 alias be="bundle exec"
 
+alias pm="cd \"\$(find \"${HOME}/Developer\" -mindepth 1 -maxdepth 1 -type d | fzf --cycle)\""
+
 eval "$(thefuck --alias 2> /dev/null)"
 
 alias x="exit"

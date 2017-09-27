@@ -44,6 +44,7 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'junegunn/fzf'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'powerline/fonts', { 'do': './install.sh' }
   Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }

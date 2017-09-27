@@ -16,6 +16,10 @@ if [[ -f "${HOME}/.iterm2_shell_integration.bash" ]]; then
   source "${HOME}/.iterm2_shell_integration.bash"
 fi
 
+if [[ -f "${HOME}/.fzf.bash" ]]; then
+  source "${HOME}/.fzf.bash"
+fi
+
 if [[ -f "${HOME}/.nvm/nvm.sh" ]]; then
   source "${HOME}/.nvm/nvm.sh"
 fi
