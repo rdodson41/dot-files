@@ -46,6 +46,9 @@
 [diff-so-fancy]
 	first-run = false
 
+[merge]
+	conflictstyle = diff3
+
 [push]
 	default   = simple
 
