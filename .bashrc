@@ -32,7 +32,7 @@ if [[ -f "${HOME}/.rvm/scripts/rvm" ]]; then
   source "${HOME}/.rvm/scripts/rvm"
 fi
 
-eval "$(find "${HOME}/.bash" -type f -name *.sh -exec echo source \"{}\" \;)"
+eval "$(find "${HOME}/.bash" -type f -name "*.sh" -exec echo source \"{}\" \;)"
 
 if [[ -d "${GNU_BIN}" ]]; then
   eval "$("${GNU_BIN}/dircolors" "${HOME}/.dircolors")"
