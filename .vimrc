@@ -37,7 +37,12 @@ nnoremap k gk
 nnoremap <up> g<up>
 nnoremap <down> g<down>
 
-map <Leader>! :VimuxPromptCommand<Enter>
+nnoremap <Leader>f :Files<Enter>
+nnoremap <Leader>b :Buffers<Enter>
+nnoremap <Leader>a :Ag<Enter>
+nnoremap <Leader>l :Lines<Enter>
+nnoremap <Leader>w :Windows<Enter>
+nnoremap <Leader>! :VimuxPromptCommand<Enter>
 
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#begin()
@@ -46,6 +51,7 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'powerline/fonts', { 'do': './install.sh' }
   Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
