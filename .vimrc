@@ -44,6 +44,13 @@ nnoremap <Leader>l :Lines<Enter>
 nnoremap <Leader>w :Windows<Enter>
 nnoremap <Leader>! :VimuxPromptCommand<Enter>
 
+nnoremap <Leader>q vi":s/"\%V\([^"]*\)"/'\1'/<Enter>:noh<Enter><C-O>
+nnoremap <Leader>Q vi':s/'\%V\([^']*\)'/"\1"/<Enter>:noh<Enter><C-O>
+nnoremap <Leader>s viw:s/['"]\%V\(\w\+\)['"]/:\1/g<Enter>:noh<Enter><C-O>
+nnoremap <Leader>h viw:s/['"]\%V\(\w\+\)['"]\s*=>\s*\\|:\%V\(\w\+\)\s*=>\s*/\1\2: /g<Enter>:noh<Enter><C-O>
+nnoremap <Leader>S viw:s/:\%V\(\w\+\)/'\1'/g<Enter>:noh<Enter><C-O>
+nnoremap <Leader>H viw:s/\%V\(\w\+\):\s*/'\1' => /g<Enter>:noh<Enter><C-O>
+
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#begin()
   Plug 'airblade/vim-gitgutter'
