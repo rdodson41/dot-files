@@ -37,11 +37,11 @@ nnoremap k gk
 nnoremap <up> g<up>
 nnoremap <down> g<down>
 
-nnoremap <Leader>f :Files<Enter>
-nnoremap <Leader>b :Buffers<Enter>
-nnoremap <Leader>a :Ag<Enter>
-nnoremap <Leader>l :Lines<Enter>
-nnoremap <Leader>w :Windows<Enter>
+nnoremap <Leader>F :Files<Enter>
+nnoremap <Leader>B :Buffers<Enter>
+nnoremap <Leader>A :Ag<Enter>
+nnoremap <Leader>L :Lines<Enter>
+nnoremap <Leader>W :Windows<Enter>
 nnoremap <Leader>! :VimuxPromptCommand<Enter>
 
 nnoremap <Leader>q vi":s/"\%V\([^"]*\)"/'\1'/<Enter>:noh<Enter><C-O>
