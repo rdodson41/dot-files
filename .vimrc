@@ -43,12 +43,16 @@ nnoremap <Leader>L :Lines<Enter>
 nnoremap <Leader>W :Windows<Enter>
 nnoremap <Leader>! :VimuxPromptCommand<Enter>
 
-nnoremap <Leader>q vi":s/"\%V\([^"]*\)"/'\1'/<Enter>:noh<Enter><C-O>
-nnoremap <Leader>Q vi':s/'\%V\([^']*\)'/"\1"/<Enter>:noh<Enter><C-O>
-nnoremap <Leader>s viw:s/['"]\%V\(\w\+\)['"]/:\1/<Enter>:noh<Enter><C-O>
-nnoremap <Leader>S viw:s/:\%V\(\w\+\)/'\1'/<Enter>:noh<Enter><C-O>
-nnoremap <Leader>h viw:s/['"]\%V\(\w\+\)['"]\s*=>\s*\\|:\%V\(\w\+\)\s*=>\s*/\1\2: /<Enter>:noh<Enter><C-O>
-nnoremap <Leader>H viw:s/\%V\(\w\+\):\s*/'\1' => /<Enter>:noh<Enter><C-O>
+nnoremap <Leader>i :s/\(\w*\%#\w*\)\\|:\(\w*\%#\w*\)\\|'\(\w*\%#\w*\)'\\|"\(\w*\%#\w*\)"/\1\2\3\4/e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>s :s/\(\w*\%#\w*\)\\|:\(\w*\%#\w*\)\\|'\(\w*\%#\w*\)'\\|"\(\w*\%#\w*\)"/:\1\2\3\4/e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>q :s/\(\w*\%#\w*\)\\|:\(\w*\%#\w*\)\\|'\([^']*\%#[^']*\)'\\|"\([^"]*\%#[^"]*\)"/'\1\2\3\4'/e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>Q :s/\(\w*\%#\w*\)\\|:\(\w*\%#\w*\)\\|'\([^']*\%#[^']*\)'\\|"\([^"]*\%#[^"]*\)"/"\1\2\3\4"/e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>k :s/\(\w*\%#\w*\)\s*=>\s*\\|:\(\w*\%#\w*\)\s*=>\s*\\|'\(\w*\%#\w*\)'\s*=>\s*\\|"\(\w*\%#\w*\)"\s*=>\s*/\1\2\3\4: /e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>K :s/\(\w*\%#\w*\):\s*/'\1' => /e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>Ki :s/\(\w*\%#\w*\):\s*/\1 => /e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>Ks :s/\(\w*\%#\w*\):\s*/:\1 => /e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>Kq :s/\(\w*\%#\w*\):\s*/'\1' => /e<Enter>:noh<Enter><C-O>
+nnoremap <Leader>KQ :s/\(\w*\%#\w*\):\s*/"\1" => /e<Enter>:noh<Enter><C-O>
 
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#begin()
