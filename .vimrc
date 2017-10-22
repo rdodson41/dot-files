@@ -1,5 +1,4 @@
 set ttimeoutlen=0
-set updatetime=0
 set mouse=a
 
 set tabstop=2
