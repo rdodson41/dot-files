@@ -36,11 +36,16 @@ nnoremap k gk
 nnoremap <up> g<up>
 nnoremap <down> g<down>
 
+nnoremap <Leader><Esc> :noh<Enter>
+
 nnoremap <Leader>F :Files<Enter>
 nnoremap <Leader>B :Buffers<Enter>
 nnoremap <Leader>A :Ag<Enter>
 nnoremap <Leader>L :Lines<Enter>
+nnoremap <Leader>M :Marks<Enter>
 nnoremap <Leader>W :Windows<Enter>
+nnoremap <Leader>H :History<Enter>
+nnoremap <Leader>C :Commits<Enter>
 nnoremap <Leader>! :VimuxPromptCommand<Enter>
 
 nnoremap <Leader>i :s/\(\w*\%#\w*\)\\|:\(\w*\%#\w*\)\\|'\(\w*\%#\w*\)'\\|"\(\w*\%#\w*\)"/\1\2\3\4/e<Enter>:noh<Enter><C-O>
