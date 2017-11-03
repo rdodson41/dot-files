@@ -1,56 +1,56 @@
 [alias]
-	a         = add --verbose
-	aa        = add --verbose --all
-	alias     = config --get-regexp ^alias[.]
-	au        = add --verbose --update
-	b         = branch --verbose --verbose
-	ba        = branch --verbose --verbose --all
-	br        = branch --verbose --verbose --remotes
-	c         = commit --verbose
-	ca        = commit --verbose --all
-	ch        = checkout
-	cl        = clone --verbose
-	core      = config --get-regexp ^core[.]
-	d         = diff
-	ds        = diff --staged
-	l         = log --graph --oneline --max-count=10
-	la        = log --graph --oneline
-	ll        = log --graph --oneline --max-count=40
-	lm        = log --graph --oneline --max-count=20
-	ls        = log --graph --oneline --max-count=10
-	m         = merge --verbose --log --no-ff
-	r         = remote --verbose
-	rp        = remote --verbose prune
-	s         = status
-	sh        = show --oneline
-	sl        = status --long
-	ss        = status --short
-	st        = stash
-	t         = tag
-	update    = !git pull && git remote prune origin && git gc
-	user      = config --get-regexp ^user[.]
+  a             = add --verbose
+	aa            = add --verbose --all
+	au            = add --verbose --update
+	b             = branch --verbose --verbose
+	ba            = branch --verbose --verbose --all
+	br            = branch --verbose --verbose --remotes
+	ch            = checkout
+	cl            = clone --verbose
+	c             = commit --verbose
+	ca            = commit --verbose --all
+	alias         = config --get-regexp ^alias[.]
+	core          = config --get-regexp ^core[.]
+	user          = config --get-regexp ^user[.]
+	d             = diff
+	ds            = diff --staged
+	l             = log --graph --oneline --max-count=10
+	la            = log --graph --oneline
+	ls            = log --graph --oneline --max-count=10
+	lm            = log --graph --oneline --max-count=20
+	ll            = log --graph --oneline --max-count=40
+	m             = merge --verbose --log --no-ff
+	r             = remote --verbose
+	rp            = remote --verbose prune
+	sh            = show --oneline
+	st            = stash
+	s             = status
+	ss            = status --short
+	sl            = status --long
+	t             = tag
+	update        = !git pull && git remote prune origin && git gc
 
 [color "diff"]
-	frag      = bold blue
+	frag          = bold blue
 
 [commit]
-	gpgsign   = true
+	gpgsign       = true
 
 [core]
-	editor    = vim
-	pager     = diff-so-fancy | less --tabs=2
+	editor        = vim
+	pager         = diff-so-fancy | less --tabs=2
 
 [credential]
-	helper    = osxkeychain
+	helper        = osxkeychain
 
 [diff-so-fancy]
-	first-run = false
+	first-run     = false
 
 [merge]
 	conflictstyle = diff3
 
 [push]
-	default   = simple
+	default       = simple
 
 [user]
-	name      = Richard E. Dodson
+	name          = Richard E. Dodson
