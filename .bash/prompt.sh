@@ -43,20 +43,6 @@ git-status()
 	fi
 }
 
-ruby-version()
-{
-  if which ruby > /dev/null; then
-    echo " | ruby-$(ruby --version | cut -f 2 -d " ")"
-  fi
-}
-
-node-version()
-{
-  if which node > /dev/null; then
-    echo " | node-$(node --version | cut -f 2 -d v)"
-  fi
-}
-
 if [[ "${USER}" == "root" ]]; then
 	PS1="\[\e[0;1;38;5;1m\]\u"
 else
@@ -75,7 +61,6 @@ PS1="${PS1}\[\e[0m\]:"
 PS1="${PS1}\[\e[0;1;38;5;4m\]\w"
 PS1="${PS1}\[\$(git-branch-color)\]\$(git-branch)"
 PS1="${PS1}\[\$(git-status-color)\]\$(git-status)"
-# PS1="${PS1}\[\e[0m\]\n\$(date) | \$(tty)\$(ruby-version)\$(node-version)"
 
 if [[ "${USER}" == "root" ]]; then
 	PS1="${PS1}\[\e[0m\]\n# "
