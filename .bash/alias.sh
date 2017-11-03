@@ -3,8 +3,8 @@
 alias -- -="cd -"
 alias -- ..="cd .."
 
-if [[ -d "${GNU_BIN}" ]]; then
-  alias ls="\"${GNU_BIN}/ls\" --format=long --human-readable --time-style=long-iso --classify --color=auto"
+if [[ -d "${COREUTILS_GNUBIN}" ]]; then
+  alias ls="\"${COREUTILS_GNUBIN}/ls\" --format=long --human-readable --time-style=long-iso --classify --color=auto"
   alias la="ls --almost-all"
 elif ls --version &> /dev/null; then
   alias ls="ls --format=long --human-readable --time-style=long-iso --classify --color=auto"
