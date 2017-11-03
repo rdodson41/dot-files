@@ -1,5 +1,13 @@
-set ttimeoutlen=0
 set mouse=a
+set clipboard=unnamed
+
+set number
+set wildmenu
+set showmode
+set showcmd
+set ruler
+
+set scrolloff=8
 
 set tabstop=2
 set softtabstop=2
@@ -8,28 +16,18 @@ set expandtab
 set autoindent
 set backspace=2
 
-set scrolloff=8
-set title
-set cursorline
-set number
-set colorcolumn=81
-set showmode
-set showcmd
-set ruler
-
-set splitbelow
-set splitright
-
-set incsearch
-set hlsearch
-set wildmenu
-
-set clipboard=unnamed
-
-syntax enable
 set t_Co=16
 set background=dark
+set cursorline
+set colorcolumn=81
+set incsearch
+set hlsearch
+
+set splitright
+set splitbelow
+
 colorscheme solarized
+syntax enable
 
 nnoremap j gj
 nnoremap k gk
