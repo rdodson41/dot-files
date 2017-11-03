@@ -62,7 +62,6 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   Plug 'airblade/vim-gitgutter'
   Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'ntpeters/vim-better-whitespace'
