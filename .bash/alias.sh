@@ -34,6 +34,9 @@ alias env-docker="env | grep ^DOCKER | sort"
 alias g="git"
 alias g-="git checkout -"
 
+alias y="yadm"
+alias y-="yadm checkout -"
+
 alias b="bundle"
 alias bi="bundle install"
 alias bu="bundle update"

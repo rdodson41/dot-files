@@ -2,6 +2,7 @@
 select(.value | test("^!") | not) |
 (
   "alias \"g\(.name)\"=\"git \(.value)\"",
+  "alias \"y\(.name)\"=\"yadm \(.value)\"",
   "__git_wrap_git_\(.name)()",
   "{",
   "  COMP_WORDS=(git \(.value) \"${COMP_WORDS[@]:1}\")",
@@ -10,5 +11,6 @@ select(.value | test("^!") | not) |
   "  (( COMP_POINT = ${#COMP_LINE} ))",
   "  __git_func_wrap __git_main",
   "}",
-  "complete -o bashdefault -o default -o nospace -F \"__git_wrap_git_\(.name)\" \"g\(.name)\""
+  "complete -o bashdefault -o default -o nospace -F \"__git_wrap_git_\(.name)\" \"g\(.name)\"",
+  "complete -o bashdefault -o default -o nospace -F \"__git_wrap_git_\(.name)\" \"y\(.name)\""
 )
