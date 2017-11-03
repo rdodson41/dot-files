@@ -39,10 +39,14 @@ if [[ -f "${HOME}/.rvm/scripts/rvm" ]]; then
   source "${HOME}/.rvm/scripts/rvm"
 fi
 
-eval "$(find "${HOME}/.bash" -type f -name "*.sh" -exec echo source \"{}\" \;)"
+for path in $(find "${HOME}/.bash" -type f -name "*.sh"); do
+  source "${path}"
+done
 
 if [[ -d "${COREUTILS_GNUBIN}" ]]; then
   eval "$("${COREUTILS_GNUBIN}/dircolors" "${HOME}/.dircolors")"
 elif dircolors --version &> /dev/null; then
   eval "$(dircolors "${HOME}/.dircolors")"
 fi
+
+unset path
