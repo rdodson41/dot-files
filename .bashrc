@@ -4,7 +4,10 @@ export PATH="$(cat /etc/paths /etc/paths.d/* | paste -s -d : -)"
 export PATH="${HOME}/.bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
-export GNU_BIN="/usr/local/opt/coreutils/libexec/gnubin"
+export COREUTILS_GNUBIN="$(brew --prefix)/opt/coreutils/libexec/gnubin"
+export COREUTILS_GNUMAN="$(brew --prefix)/opt/coreutils/libexec/gnuman"
+export FINDUTILS_GNUBIN="$(brew --prefix)/opt/findutils/libexec/gnubin"
+export FINDUTILS_GNUMAN="$(brew --prefix)/opt/findutils/libexec/gnuman"
 
 export GPG_TTY="$(tty)"
 
@@ -12,8 +15,8 @@ if [[ -d "${HOME}/Developer/go" ]]; then
   export GOPATH="${HOME}/Developer/go"
 fi
 
-if [[ -f "/usr/local/etc/bash_completion" ]]; then
-  source "/usr/local/etc/bash_completion"
+if [[ -f "$(brew --prefix)/etc/bash_completion" ]]; then
+  source "$(brew --prefix)/etc/bash_completion"
 fi
 
 if [[ -f "${HOME}/.iterm2_shell_integration.bash" ]]; then
@@ -38,8 +41,8 @@ fi
 
 eval "$(find "${HOME}/.bash" -type f -name "*.sh" -exec echo source \"{}\" \;)"
 
-if [[ -d "${GNU_BIN}" ]]; then
-  eval "$("${GNU_BIN}/dircolors" "${HOME}/.dircolors")"
+if [[ -d "${COREUTILS_GNUBIN}" ]]; then
+  eval "$("${COREUTILS_GNUBIN}/dircolors" "${HOME}/.dircolors")"
 elif dircolors --version &> /dev/null; then
   eval "$(dircolors "${HOME}/.dircolors")"
 fi
