@@ -1,7 +1,7 @@
 {
-	"ext": {
-		"vim": {
-			"colorscheme": "solarized"
-		}
-	}
+  "ext": {
+    "vim": {
+      "colorscheme": "solarized"
+    }
+  }
 }
