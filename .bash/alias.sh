@@ -37,6 +37,7 @@ alias y-="yadm checkout -"
 alias b="bundle"
 alias bi="bundle install"
 alias bu="bundle update"
+alias bp="bundle package"
 alias be="bundle exec"
 
 eval "$(thefuck --alias 2> /dev/null)"
