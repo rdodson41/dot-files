@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH="$(cat /etc/paths /etc/paths.d/* | paste -s -d : -)"
+export PATH="${HOME}/.bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
 export GNU_BIN="/usr/local/opt/coreutils/libexec/gnubin"
