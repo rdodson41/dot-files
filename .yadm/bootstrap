@@ -5,6 +5,8 @@ set -e
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle --global
+brew cleanup -s
+brew prune
 
 # Install submodules
 yadm submodule update --init
