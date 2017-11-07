@@ -1,21 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="$(cat /etc/paths /etc/paths.d/* | paste -s -d : -)"
-export PATH="${HOME}/.bin:${PATH}"
-export PATH="${HOME}/.local/bin:${PATH}"
-
-export COREUTILS_GNUBIN="$(brew --prefix)/opt/coreutils/libexec/gnubin"
-export COREUTILS_GNUMAN="$(brew --prefix)/opt/coreutils/libexec/gnuman"
-export FINDUTILS_GNUBIN="$(brew --prefix)/opt/findutils/libexec/gnubin"
-export FINDUTILS_GNUMAN="$(brew --prefix)/opt/findutils/libexec/gnuman"
-
-export GPG_TTY="$(tty)"
-
-if [[ -d "${HOME}/Developer/go" ]]; then
-  export GOPATH="${HOME}/Developer/go"
-fi
-
-if [[ -f "$(brew --prefix)/etc/bash_completion" ]]; then
+if which brew > /dev/null && [[ -f "$(brew --prefix)/etc/bash_completion" ]]; then
   source "$(brew --prefix)/etc/bash_completion"
 fi
 
@@ -43,9 +28,9 @@ for path in $(find "${HOME}/.bash" -type f -name "*.sh"); do
   source "${path}"
 done
 
-if [[ -d "${COREUTILS_GNUBIN}" ]]; then
+if [[ -n "${COREUTILS_GNUBIN}" && -d "${COREUTILS_GNUBIN}" ]] && which "${COREUTILS_GNUBIN}/dircolors" > /dev/null; then
   eval "$("${COREUTILS_GNUBIN}/dircolors" "${HOME}/.dircolors")"
-elif dircolors --version &> /dev/null; then
+elif which dircolors > /dev/null; then
   eval "$(dircolors "${HOME}/.dircolors")"
 fi
 

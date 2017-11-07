@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+export GPG_TTY="$(tty)"
+
+if which brew > /dev/null; then
+  export COREUTILS_GNUBIN="$(brew --prefix)/opt/coreutils/libexec/gnubin"
+fi
+
+export PATH="${HOME}/.bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
+export GOPATH="${HOME}/Developer/go"
+
 if [[ -f "${HOME}/.bashrc" ]]; then
 	source "${HOME}/.bashrc"
 fi

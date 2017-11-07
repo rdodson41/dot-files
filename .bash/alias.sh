@@ -3,7 +3,7 @@
 alias -- -="cd -"
 alias -- ..="cd .."
 
-if [[ -d "${COREUTILS_GNUBIN}" ]]; then
+if [[ -n "${COREUTILS_GNUBIN}" && -d "${COREUTILS_GNUBIN}" ]] && which "${COREUTILS_GNUBIN}/ls" > /dev/null; then
   alias ls="\"${COREUTILS_GNUBIN}/ls\" --format=long --human-readable --time-style=long-iso --classify --color=auto"
   alias la="ls --almost-all"
 elif ls --version &> /dev/null; then
@@ -40,6 +40,8 @@ alias bu="bundle update"
 alias bp="bundle package"
 alias be="bundle exec"
 
-eval "$(thefuck --alias 2> /dev/null)"
+if which thefuck > /dev/null; then
+  eval "$(thefuck --alias)"
+fi
 
 alias x="exit"

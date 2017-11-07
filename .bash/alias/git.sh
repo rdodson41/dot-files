@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ -f "${HOME}/.bash/alias/git.jq" ]]; then
-  eval "$(git alias 2> /dev/null | jq --from-file "${HOME}/.bash/alias/git.jq" --raw-input --raw-output 2> /dev/null)"
+if [[ -f "${HOME}/.bash/alias/git.jq" ]] && which git jq > /dev/null; then
+  eval "$(git config --get-regexp "^alias[.]" | jq --from-file "${HOME}/.bash/alias/git.jq" --raw-input --raw-output)"
 fi
