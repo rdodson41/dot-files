@@ -1,5 +1,6 @@
 set mouse=a
 set clipboard=unnamed
+set ttimeoutlen=0
 
 set number
 set wildmenu
