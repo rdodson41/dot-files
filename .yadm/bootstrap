@@ -22,6 +22,7 @@ vim '+PlugClean' '+PlugUpdate' '+quitall'
 # Install tmux Plugin Manager
 rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux new-session ~/.tmux/plugins/tpm/bindings/install_plugins
 
 # Install fzf keybindings and fuzzy completion
 "$(brew --prefix)/opt/fzf/install" --no-update-rc --no-zsh --no-fish
