@@ -7,7 +7,7 @@ set -e
 brew bundle --global
 brew cleanup -s
 brew prune
-brew doctor
+brew doctor || true
 
 # Install submodules
 yadm submodule update --init --recursive
