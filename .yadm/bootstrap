@@ -10,7 +10,7 @@ brew prune
 brew doctor
 
 # Install submodules
-yadm submodule update --init
+yadm submodule update --init --recursive
 yadm remote set-url origin git@github.com:rdodson41/dot-files.git
 git -C "${HOME}/.ssh" remote set-url origin git@bitbucket.org:rdodson41/.ssh.git
 git -C "${HOME}/.gnupg" remote set-url origin git@bitbucket.org:rdodson41/.gnupg.git
