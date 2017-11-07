@@ -70,15 +70,29 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
   call plug#end()
 endif
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 autocmd VimEnter * call s:initialize_powerline()
+autocmd VimEnter * call s:initialize_airline()
 autocmd VimEnter * call s:initialize_vim_better_whitespace()
 
 function s:initialize_powerline()
   if exists('g:powerline_loaded')
+    set laststatus=2
+    set noshowmode
+    set noruler
+  endif
+endfunction
+
+function s:initialize_airline()
+  if exists('g:loaded_airline')
     set laststatus=2
     set noshowmode
     set noruler
