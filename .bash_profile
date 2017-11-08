@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export GPG_TTY="$(tty)"
-
 if which brew > /dev/null; then
   export COREUTILS_GNUBIN="$(brew --prefix)/opt/coreutils/libexec/gnubin"
 fi
