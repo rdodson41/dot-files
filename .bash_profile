@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if which brew > /dev/null; then
-  export COREUTILS_GNUBIN="$(brew --prefix)/opt/coreutils/libexec/gnubin"
+  export COREUTILS_GNUBIN="$(brew --prefix coreutils)/libexec/gnubin"
 fi
 
 export PATH="${HOME}/.bin:${PATH}"
