@@ -21,14 +21,13 @@
 	ll            = log --graph --oneline --max-count=40
 	m             = merge --verbose --log --no-ff
 	r             = remote --verbose
-	rp            = remote --verbose prune
 	sh            = show --oneline
 	st            = stash
 	s             = status
 	ss            = status --short
 	sl            = status --long
 	t             = tag
-	update        = !git pull && git remote prune origin && git gc
+	update        = !git pull --all && git gc --auto
 
 [color "diff"]
 	frag          = bold blue
@@ -45,6 +44,10 @@
 
 [diff-so-fancy]
 	first-run     = false
+
+[fetch]
+	prune         = true
+	pruneTags     = true
 
 [merge]
 	conflictstyle = diff3
