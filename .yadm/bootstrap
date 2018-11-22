@@ -5,7 +5,6 @@ set -e
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew bundle install --no-upgrade --global
-brew cleanup
 brew doctor || true
 
 # Install submodules
