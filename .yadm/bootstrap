@@ -4,7 +4,7 @@ set -e
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew bundle --global
+brew bundle install --no-upgrade --global
 brew cleanup -s
 brew prune
 brew doctor || true
