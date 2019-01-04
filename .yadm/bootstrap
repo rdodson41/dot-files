@@ -16,8 +16,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 vim '+PlugInstall' '+quitall'
 
 # Install tmux Plugin Manager
-rm -rf ~/.tmux/plugins/tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if ! [[ -d "${HOME}/.tmux/plugins/tpm" ]]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 tmux new-session ~/.tmux/plugins/tpm/bindings/install_plugins
 
 # Install fzf keybindings and fuzzy completion
