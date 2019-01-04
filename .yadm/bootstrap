@@ -21,7 +21,7 @@ if ! [[ -d "${HOME}/.tmux/plugins/tpm" ]]; then
 fi
 "${HOME}/.tmux/plugins/tpm/bin/install_plugins"
 
-# Install fzf keybindings and fuzzy completion
+# Install useful fzf key bindings and fuzzy completion
 "$(brew --prefix)/opt/fzf/install" --no-update-rc --no-zsh --no-fish
 
 # Install Ruby Version Manager
