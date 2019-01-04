@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# Remove stale lock files and outdated downloads for formulae and casks, and
-# remove old versions of installed formulae
+# Remove stale lock files and outdated downloads for Homebrew formulae and
+# casks, and remove old versions of installed formulae
 brew cleanup -s
 
-# Remove unused directories
+# Remove unused Vim plugin directories
 vim '+PlugClean' '+quitall'
+
+# Remove unused tmux plugins
+"${HOME}/.tmux/plugins/tpm/bin/clean_plugins"

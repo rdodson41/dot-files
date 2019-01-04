@@ -19,7 +19,7 @@ vim '+PlugInstall' '+quitall'
 if ! [[ -d "${HOME}/.tmux/plugins/tpm" ]]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
-tmux new-session ~/.tmux/plugins/tpm/bindings/install_plugins
+"${HOME}/.tmux/plugins/tpm/bin/install_plugins"
 
 # Install fzf keybindings and fuzzy completion
 "$(brew --prefix)/opt/fzf/install" --no-update-rc --no-zsh --no-fish
