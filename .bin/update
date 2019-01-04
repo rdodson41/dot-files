@@ -18,7 +18,7 @@ vim '+PlugUpgrade' '+quitall'
 vim '+PlugUpdate' '+quitall'
 
 # Update tmux plugins
-"${HOME}/.tmux/plugins/tpm/bin/update_plugins"
+"${HOME}/.tmux/plugins/tpm/bin/update_plugins" all
 
 # Update RVM
 rvm get stable
