@@ -7,7 +7,6 @@ if ! which brew > /dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 brew bundle install --no-upgrade --global
-brew doctor || true
 
 # Install submodules
 yadm submodule update --init --remote --merge --recursive
