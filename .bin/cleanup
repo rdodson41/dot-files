@@ -3,3 +3,6 @@
 # Remove stale lock files and outdated downloads for formulae and casks, and
 # remove old versions of installed formulae
 brew cleanup -s
+
+# Remove unused directories
+vim '+PlugClean' '+quitall'
