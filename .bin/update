@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Fetch the newest version of Homebrew and all formulae from GitHub using git(1)
+# and perform any necessary migrations.
+brew update --merge
+
+# Upgrade all dependencies in the global Brewfile.
+brew bundle install --global
+
+# Update the registered submodules to match what the superproject expects by
+# cloning missing submodules and updating the working tree of the submodules.
+yadm submodule update --init --remote --merge --recursive
+
+# Upgrade vim-plug
+vim '+PlugUpgrade' '+quitall'
+
+# Update Vim plugins
+vim '+PlugUpdate' '+quitall'
+
+# Update tmux plugins
+"${HOME}/.tmux/plugins/tpm/bin/update_plugins"
+
+# Update RVM
+rvm get stable
+
+# Update NVM
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash

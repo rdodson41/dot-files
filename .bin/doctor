@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# Check your system for potential problems
+# Check your system for potential problems.
 brew doctor
