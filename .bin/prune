@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Remove dead symlinks from the Homebrew prefix.
-brew prune
