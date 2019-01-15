@@ -6,6 +6,10 @@ if which brew > /dev/null && [[ -f "$(brew --prefix)/etc/bash_completion" ]]; th
   source "$(brew --prefix)/etc/bash_completion"
 fi
 
+if which brew > /dev/null && [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; then
+  source "$(brew --prefix)/etc/profile.d/z.sh"
+fi
+
 if [[ -f "${HOME}/.iterm2_shell_integration.bash" ]]; then
   source "${HOME}/.iterm2_shell_integration.bash"
 fi
