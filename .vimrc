@@ -70,6 +70,7 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ruby/vim-ruby'
