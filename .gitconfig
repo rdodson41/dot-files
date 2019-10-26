@@ -14,6 +14,8 @@
 	user          = config --get-regexp ^user[.]
 	d             = diff
 	ds            = diff --staged
+  dcop          = !git diff --name-only develop | grep .rb | xargs bundle exec rubocop --force-exclusion
+  dspec         = !git diff --name-only develop spec | grep _spec.rb | xargs bundle exec rspec
 	l             = log --graph --oneline --max-count=10
 	la            = log --graph --oneline
 	ls            = log --graph --oneline --max-count=10
