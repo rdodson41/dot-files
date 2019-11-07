@@ -16,11 +16,11 @@
 	ds            = diff --staged
   dcop          = !git diff --name-only develop | grep .rb | xargs bundle exec rubocop --force-exclusion
   dspec         = !git diff --name-only develop spec | grep _spec.rb | xargs bundle exec rspec
-	l             = log --graph --oneline --max-count=10
-	la            = log --graph --oneline
-	ls            = log --graph --oneline --max-count=10
-	lm            = log --graph --oneline --max-count=20
-	ll            = log --graph --oneline --max-count=40
+	l             = log --oneline --max-count=10
+	la            = log --oneline
+	ls            = log --oneline --max-count=10
+	lm            = log --oneline --max-count=20
+	ll            = log --oneline --max-count=40
 	m             = merge --verbose --log --no-ff
 	r             = remote --verbose
 	sh            = show --oneline
