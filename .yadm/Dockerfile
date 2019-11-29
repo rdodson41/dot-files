@@ -8,4 +8,4 @@ USER rich
 
 WORKDIR /home/rich
 
-RUN yadm clone https://github.com/rdodson41/dot-files.git
+RUN yadm clone --bootstrap https://github.com/rdodson41/dot-files.git
