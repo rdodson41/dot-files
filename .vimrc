@@ -13,3 +13,5 @@ set incsearch
 set hlsearch
 
 syntax enable
+
+nnoremap <Leader><Esc> :noh<Enter>
