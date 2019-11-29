@@ -11,3 +11,5 @@ set backspace=2
 set cursorline
 set incsearch
 set hlsearch
+
+syntax enable
