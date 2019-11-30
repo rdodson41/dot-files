@@ -1,0 +1,32 @@
+[alias]
+  a = add
+  au = add --update
+  aa = add --all
+  b = branch --verbose --verbose
+  br = branch --remotes --verbose --verbose
+  ba = branch --all --verbose --verbose
+  ch = checkout
+  cl = clone
+  c = commit
+  ca = commit --all
+  d = diff
+  dc = diff --cached
+  l = log --oneline
+  ls = log --max-count=10 --oneline
+  lm = log --max-count=20 --oneline
+  ll = log --max-count=40 --oneline
+  m = merge
+  r = remote --verbose
+  sh = show --oneline
+  st = stash
+  s = status
+  t = tag
+[commit]
+  gpgSign = true
+[fetch]
+  prune = true
+  pruneTags = true
+[merge]
+  conflictStyle = diff3
+[tag]
+  gpgSign = true
