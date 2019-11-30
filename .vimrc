@@ -22,4 +22,6 @@ if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#end()
 endif
 
-silent! colorscheme solarized
+if filereadable(glob('~/.vim/plugged/vim-colors-solarized/colors/solarized.vim'))
+  colorscheme solarized
+endi
