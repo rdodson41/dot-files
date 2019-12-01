@@ -1,3 +1,4 @@
+set mouse=a
 set number
 set wildmenu
 set showmode
@@ -11,6 +12,8 @@ set backspace=2
 set cursorline
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 nnoremap <Leader><Esc> :noh<Enter>
 
