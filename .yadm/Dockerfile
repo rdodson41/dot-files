@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:latest
 
 RUN apt-get update
 RUN apt-get install --yes byobu curl fzf git gpg man pass vim yadm
