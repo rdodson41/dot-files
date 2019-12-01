@@ -15,3 +15,11 @@ alias y="yadm"
 alias y-="yadm checkout -"
 alias b="bundle"
 alias be="bundle exec"
+
+if ls --version &> /dev/null; then
+  alias ls="ls --color --classify --format=long --human-readable --time-style=long-iso"
+  alias la="ls --almost-all"
+else
+  alias ls="ls -FGhlT"
+  alias la="ls -A"
+fi
