@@ -10,6 +10,7 @@ set expandtab
 set autoindent
 set backspace=2
 set cursorline
+set colorcolumn=80
 set incsearch
 set hlsearch
 set ignorecase
