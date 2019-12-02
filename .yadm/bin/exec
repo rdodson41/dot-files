@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker exec --env TERM="${TERM}" --interactive --tty develop "${@}"
+docker exec --env TERM="${TERM}" --env COLORFGBG="${COLORFGBG}" --interactive --tty develop "${@}"
