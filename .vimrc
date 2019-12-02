@@ -19,4 +19,4 @@ set smartcase
 nnoremap <Leader><Esc> :noh<Enter>
 
 source ~/.vim/plug.vim
-source ~/.vim/solarized.vim
+source ~/.vim/colorscheme.vim
