@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker run --env TERM="${TERM}" --interactive --name develop --rm --tty --volume ~/.ssh:/home/rich/.ssh --volume ~/.gnupg:/home/rich/.gnupg --volume ~/.password-store:/home/rich/.password-store "${@}" develop:latest
+docker run --env TERM="${TERM}" --env COLORFGBG="${COLORFGBG}" --interactive --name develop --rm --tty --volume ~/.ssh:/home/rich/.ssh --volume ~/.gnupg:/home/rich/.gnupg --volume ~/.password-store:/home/rich/.password-store "${@}" develop:latest
