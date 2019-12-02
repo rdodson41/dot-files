@@ -18,14 +18,5 @@ set smartcase
 
 nnoremap <Leader><Esc> :noh<Enter>
 
-if filereadable(glob('~/.vim/autoload/plug.vim'))
-  call plug#begin()
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
-  call plug#end()
-endif
-
-if filereadable(glob('~/.vim/plugged/vim-colors-solarized/colors/solarized.vim'))
-  colorscheme solarized
-endif
+source ~/.vim/plug.vim
+source ~/.vim/solarized.vim
