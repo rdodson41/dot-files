@@ -1,7 +1,7 @@
 FROM debian:latest
 
 RUN apt-get update
-RUN apt-get install --yes byobu curl fzf gcc git gpg make man pass vim yadm
+RUN apt-get install --yes bash-completion byobu curl fzf gcc git gpg make man pass vim yadm
 RUN useradd --create-home --shell /bin/bash rich
 
 USER rich
