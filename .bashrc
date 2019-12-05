@@ -3,11 +3,17 @@
 export GPG_TTY="$(tty)"
 
 if which brew > /dev/null; then
-  BREW_PREFIX="$(brew --prefix)"
+  BASH_COMPLETION="$(brew --prefix)/etc/bash_completion"
+else
+  BASH_COMPLETION="/usr/share/bash-completion/bash_completion"
 fi
 
-if [[ -f "${BREW_PREFIX}/etc/bash_completion" ]]; then
-  source "${BREW_PREFIX}/etc/bash_completion"
+if [[ -f "${BASH_COMPLETION}" ]]; then
+  source "${BASH_COMPLETION}"
+fi
+
+if [[ -f "${HOME}/.fzf.bash" ]]; then
+  source "${HOME}/.fzf.bash"
 fi
 
 if [[ -f "${HOME}/.bash/aliases" ]]; then
