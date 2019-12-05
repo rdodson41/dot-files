@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-# Install Vim plugin 'vim-plug'
+# Install Homebrew.
+if [[ "$(uname)" == "Darwin" ]] && ! which brew > /dev/null; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Install all dependencies in the global Brewfile.
+brew bundle --global install --no-upgrade
+
+# Install Vim plugin 'vim-plug'.
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Install Vim plugins
+# Install Vim plugins.
 vim -es -u ~/.vim/plug.vim '+PlugInstall' '+quitall'

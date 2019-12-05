@@ -1,0 +1,6 @@
+brew 'byobu'
+brew 'fzf'
+brew 'gnupg'
+brew 'pass'
+brew 'vim'
+brew 'yadm'
