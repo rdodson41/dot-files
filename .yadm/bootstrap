@@ -6,7 +6,9 @@ if [[ "$(uname)" == "Darwin" ]] && ! which brew > /dev/null; then
 fi
 
 # Install all dependencies in the global Brewfile.
-brew bundle --global install --no-upgrade
+if [[ "$(uname)" == "Darwin" ]] && which brew > /dev/null; then
+  brew bundle --global install --no-upgrade
+fi
 
 # Install Vim plugin 'vim-plug'.
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
