@@ -8,6 +8,9 @@ fi
 # Install all dependencies in the global Brewfile.
 if which brew > /dev/null; then
   brew bundle --global install --no-upgrade
+  FZF_INSTALL="$(brew --prefix)/opt/fzf/install"
+else
+  FZF_INSTALL="${HOME}/.opt/fzf/install"
 fi
 
 # Install Vim plugin manager 'vim-plug'.
@@ -17,10 +20,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 vim -es -u ~/.vim/plug.vim '+PlugInstall' '+quitall'
 
 # Install useful 'fzf' key bindings and fuzzy completion.
-if which brew > /dev/null; then
-  FZF_INSTALL="$(brew --prefix)/opt/fzf/install"
-else
-  FZF_INSTALL="${HOME}/.fzf/install"
-fi
-
 "${FZF_INSTALL}" --key-bindings --completion --no-update-rc --no-zsh --no-fish
