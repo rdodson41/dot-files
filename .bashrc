@@ -22,10 +22,10 @@ if [[ -f "${HOME}/.fzf.bash" ]]; then
   source "${HOME}/.fzf.bash"
 fi
 
-if [[ -f "${HOME}/.bash/aliases" ]]; then
-  source "${HOME}/.bash/aliases"
+if [[ -f "${HOME}/.bashrc.d/aliases" ]]; then
+  source "${HOME}/.bashrc.d/aliases"
 fi
 
-if [[ -f "${HOME}/.bash/prompt" ]]; then
-  source "${HOME}/.bash/prompt"
+if [[ -f "${HOME}/.bashrc.d/prompt" ]]; then
+  source "${HOME}/.bashrc.d/prompt"
 fi

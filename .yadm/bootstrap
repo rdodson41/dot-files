@@ -17,7 +17,7 @@ fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Vim plugins.
-vim -es -u ~/.vim/plug.vim '+PlugInstall' '+quitall'
+vim -es -u ~/.vimrc.d/plug.vim '+PlugInstall' '+quitall'
 
 # Install useful 'fzf' key bindings and fuzzy completion.
 "${FZF_INSTALL}" --key-bindings --completion --no-update-rc --no-zsh --no-fish
