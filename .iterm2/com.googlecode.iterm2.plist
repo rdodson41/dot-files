@@ -11,7 +11,7 @@
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
 	<key>Default Bookmark Guid</key>
-	<string>FE47A3C6-F845-4773-87CD-59F5F64254F9</string>
+	<string>8EDE05D6-BFD4-46D8-BCA1-84998E9F700B</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -285,7 +285,7 @@
 				<real>0.73333334922790527</real>
 			</dict>
 			<key>Guid</key>
-			<string>984D17BE-EF30-4BD6-BC0C-5C3F6EBC462C</string>
+			<string>97085065-00E4-475E-847E-3B1206201180</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -948,7 +948,7 @@
 				<real>0.51372549019607838</real>
 			</dict>
 			<key>Guid</key>
-			<string>FE47A3C6-F845-4773-87CD-59F5F64254F9</string>
+			<string>8EDE05D6-BFD4-46D8-BCA1-84998E9F700B</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -1628,7 +1628,7 @@
 				<real>0.396078431372549</real>
 			</dict>
 			<key>Guid</key>
-			<string>A7CB172E-FD9C-406D-9189-92FB10459302</string>
+			<string>6AF960CE-4544-45CB-BCEA-6469F3E9E492</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -2312,7 +2312,7 @@
 				<real>0.51372549019607838</real>
 			</dict>
 			<key>Guid</key>
-			<string>00712D4F-53E4-428F-9A6A-AC7FCFE34B08</string>
+			<string>B28310CE-5861-41C2-9D7B-075A141FD215</string>
 			<key>Has Hotkey</key>
 			<true/>
 			<key>Horizontal Spacing</key>
@@ -2740,15 +2740,15 @@
 		<string>{398, 727}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
-	<string>55C70CB8-5CB7-4FB7-913E-FE3B34D7AE6D</string>
+	<string>EC95EBB6-B137-4B91-AACC-47311BF14206</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>597617185.14786303</real>
+	<real>597622916.12181699</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncRecordedVariables</key>
@@ -3426,7 +3426,7 @@
 		</array>
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>597444385.14776504</real>
+	<real>597450116.12169099</real>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/rdodson/.iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
@@ -3434,11 +3434,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=22</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=80</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-07T20:47:00Z</date>
+	<date>2019-12-07T22:22:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
