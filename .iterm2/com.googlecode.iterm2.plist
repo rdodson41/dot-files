@@ -662,6 +662,10 @@
 	<string>F220066D-AB82-4D9F-82CC-9270B6855CFD</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
 	<integer>1</integer>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>597615593.28486001</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
