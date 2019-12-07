@@ -1,8 +1,8 @@
 FROM debian:latest
 
 RUN apt-get update
-RUN apt-get install --yes bash-completion byobu curl gcc git gpg make man pass vim yadm
-RUN useradd --create-home --shell /bin/bash rich
+RUN apt-get install --yes bash-completion byobu curl gcc git gpg make man pass procps sudo vim yadm
+RUN useradd --groups sudo --create-home --password '$1$pKMsk25j$xjnW2hDevxCklXRdA0QtW.' --shell /bin/bash rich
 
 USER rich
 
