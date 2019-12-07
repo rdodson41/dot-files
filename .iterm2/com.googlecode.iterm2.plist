@@ -1327,7 +1327,7 @@
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>597442793.28476405</real>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/rdodson</string>
+	<string>/Users/rdodson/.iterm2</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
