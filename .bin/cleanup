@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Remove stale lock files and outdated downlaods for all Homebrew formulae and
+# casks, and remove old versions of installed formulae.
+if which brew > /dev/null; then
+  brew cleanup -s
+fi
