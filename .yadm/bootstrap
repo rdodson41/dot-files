@@ -7,7 +7,7 @@ fi
 
 # Install all dependencies in the global Brewfile.
 if which brew > /dev/null; then
-  brew bundle --global install --no-upgrade
+  brew bundle --global install --no-upgrade --no-lock
   FZF_INSTALL="$(brew --prefix)/opt/fzf/install"
 else
   FZF_INSTALL="${HOME}/.opt/fzf/install"
