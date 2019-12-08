@@ -5,3 +5,6 @@
 if which brew > /dev/null; then
   brew update
 fi
+
+# Upgrade Vim plugin manager 'vim-plug'.
+vim '+PlugUpgrade' '+quitall'
