@@ -1,3 +1,4 @@
+brew 'bash'
 brew 'bash-completion'
 brew 'byobu'
 brew 'fzf'
