@@ -22,6 +22,10 @@ if filereadable(glob('~/.vimrc.d/plug.vim'))
   source ~/.vimrc.d/plug.vim
 endif
 
+if filereadable(glob('~/.vimrc.d/powerline.vim'))
+  source ~/.vimrc.d/powerline.vim
+endif
+
 if filereadable(glob('~/.vimrc.d/colorscheme.vim'))
   source ~/.vimrc.d/colorscheme.vim
 endif
