@@ -2,6 +2,8 @@
 
 alias -- -="cd -"
 alias -- ..="cd .."
+alias ls="ls -FGhlT"
+alias la="ls -A"
 alias grep="grep --color"
 alias egrep="egrep --color"
 alias fgrep="fgrep --color"
@@ -15,7 +17,3 @@ alias y="yadm"
 alias y-="yadm checkout -"
 alias b="bundle"
 alias be="bundle exec"
-
-if [[ -f "${HOME}/.bashrc.d/aliases.d/ls" ]]; then
-  source "${HOME}/.bashrc.d/aliases.d/ls"
-fi

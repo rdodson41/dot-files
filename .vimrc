@@ -1,4 +1,5 @@
 set mouse=a
+set clipboard=unnamed
 set number
 set wildmenu
 set showmode

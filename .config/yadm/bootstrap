@@ -7,26 +7,25 @@ fi
 
 # Install all dependencies in the global Brewfile.
 if which brew > /dev/null; then
-  brew bundle --global install --no-upgrade --no-lock
-  FZF_INSTALL="$(brew --prefix)/opt/fzf/install"
-else
-  FZF_INSTALL="${HOME}/.opt/fzf/install"
+  brew bundle install --no-upgrade --global
 fi
 
 # Install Vim plugin manager 'vim-plug'.
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Vim plugins.
-vim -es -u ~/.vimrc.d/plug.vim '+PlugInstall' '+quitall'
+vim '+PlugInstall' '+quitall'
 
 # Install useful 'fzf' key bindings and fuzzy completion.
-"${FZF_INSTALL}" --key-bindings --completion --no-update-rc --no-zsh --no-fish
+if which brew > /dev/null; then
+  "$(brew --prefix fzf)/install" --key-bindings --completion --no-update-rc --no-zsh --no-fish
+fi
 
-# Install RVM GPG keys.
-gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+# Install Ruby version manager RVM GPG keys.
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
-# Install RVM.
+# Install Ruby version manager RVM.
 \curl -sSL https://get.rvm.io | bash -s stable
 
-# Install NVM.
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+# Install Node.js version manager 'nvm'.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash

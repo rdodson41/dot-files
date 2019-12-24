@@ -1,8 +1,4 @@
-if has('mac')
-  set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
-else
-  set rtp+=/usr/local/lib/python3.7/dist-packages/powerline/bindings/vim
-endif
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
 
 autocmd VimEnter * call s:initialize_powerline()
 
