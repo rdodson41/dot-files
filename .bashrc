@@ -34,5 +34,3 @@ fi
 if [[ -f "${HOME}/.bashrc.d/aliases" ]]; then
   source "${HOME}/.bashrc.d/aliases"
 fi
-
-export PATH="${PATH}:${HOME}/.rvm/bin"
