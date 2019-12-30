@@ -2,9 +2,7 @@ set mouse=a
 set clipboard=unnamed
 set number
 set wildmenu
-set showmode
 set showcmd
-set ruler
 set softtabstop=2
 set shiftwidth=2
 set expandtab
@@ -16,17 +14,33 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set runtimepath+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
 
-nnoremap <Leader><Esc> :noh<Enter>
+nnoremap <Leader><Esc> :nohlsearch<Enter>
 
-if filereadable(glob('~/.vimrc.d/plug.vim'))
-  source ~/.vimrc.d/plug.vim
+if filereadable(glob('~/.vim/autoload/plug.vim'))
+  call plug#begin()
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
+  Plug 'shumphrey/fugitive-gitlab.vim'
+  Plug 'tpope/vim-endwise'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  call plug#end()
 endif
 
-if filereadable(glob('~/.vimrc.d/powerline.vim'))
-  source ~/.vimrc.d/powerline.vim
+if filereadable(glob('~/.vim/plugged/vim-colors-solarized/colors/solarized.vim'))
+  colorscheme solarized
 endif
 
-if filereadable(glob('~/.vimrc.d/colorscheme.vim'))
-  source ~/.vimrc.d/colorscheme.vim
-endif
+autocmd VimEnter * call s:initialize_powerline()
+
+function s:initialize_powerline()
+  if exists('g:powerline_loaded')
+    set laststatus=2
+    set noshowmode
+  else
+    set ruler
+  endif
+endfunction
