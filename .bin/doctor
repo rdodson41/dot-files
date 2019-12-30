@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Check your system for potential problems.
-if which brew > /dev/null; then
-  brew doctor
-fi

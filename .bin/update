@@ -7,4 +7,4 @@ if which brew > /dev/null; then
 fi
 
 # Upgrade Vim plugin manager 'vim-plug'.
-vim '+PlugUpgrade' '+quitall'
+vim -c PlugUpgrade -c quitall

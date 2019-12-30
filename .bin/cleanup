@@ -7,4 +7,4 @@ if which brew > /dev/null; then
 fi
 
 # Remove unlisted Vim plugins.
-vim '+PlugClean' '+quitall'
+vim -c PlugClean -c quitall
