@@ -8,3 +8,6 @@ fi
 
 # Upgrade Vim plugin manager 'vim-plug'.
 vim -c PlugUpgrade -c quitall
+
+# Upgrade Ruby version manager RVM.
+rvm get stable

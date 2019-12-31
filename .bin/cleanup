@@ -8,3 +8,7 @@ fi
 
 # Remove unlisted Vim plugins.
 vim -c PlugClean -c quitall
+
+# Reclaim all of the space used by RVM archives, repository clones, source files
+# (and associated temporary compile file) and logs.
+rvm cleanup all
