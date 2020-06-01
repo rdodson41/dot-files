@@ -14,6 +14,7 @@ alias rgrep="rgrep --color"
 alias zgrep="zgrep --color"
 alias zegrep="zegrep --color"
 alias zfgrep="zfgrep --color"
+alias be="bundle exec"
 
 if which brew > /dev/null && [[ -f "$(brew --prefix)/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh" ]]; then
   source "$(brew --prefix)/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
