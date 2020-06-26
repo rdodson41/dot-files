@@ -29,7 +29,5 @@
   pruneTags = true
 [merge]
   conflictStyle = diff3
-[tag]
-  gpgSign = true
 [user]
   name = Richard E. Dodson
