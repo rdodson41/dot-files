@@ -3,6 +3,7 @@ set clipboard=unnamed
 set number
 set wildmenu
 set showcmd
+set scrolloff=8
 set softtabstop=2
 set shiftwidth=2
 set expandtab
