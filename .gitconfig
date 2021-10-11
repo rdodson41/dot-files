@@ -31,3 +31,5 @@
   conflictStyle = diff3
 [user]
   name = Richard E. Dodson
+[init]
+  defaultBranch = main
