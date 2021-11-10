@@ -15,7 +15,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set runtimepath+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
+set runtimepath+=/usr/local/lib/python3.9/site-packages/powerline/bindings/vim
 
 nnoremap <Leader><Esc> :nohlsearch<Enter>
 
