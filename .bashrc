@@ -28,6 +28,16 @@ if which brew > /dev/null && [[ -f "$(brew --prefix)/etc/profile.d/z.sh" ]]; the
   source "$(brew --prefix)/etc/profile.d/z.sh"
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if which brew > /dev/null && [[ -f "$(brew --prefix)/opt/google-cloud-sdk/path.bash.inc" ]]; then
+  source "$(brew --prefix)/opt/google-cloud-sdk/path.bash.inc"
+fi
+
+# The next line enables shell command completion for gcloud.
+if which brew > /dev/null && [[ -f "$(brew --prefix)/opt/google-cloud-sdk/completion.bash.inc" ]]; then
+  source "$(brew --prefix)/opt/google-cloud-sdk/completion.bash.inc"
+fi
+
 if [[ -e "${HOME}/.iterm2_shell_integration.bash" ]]; then
   source "${HOME}/.iterm2_shell_integration.bash"
 fi
