@@ -15,6 +15,10 @@ alias zgrep="zgrep --color"
 alias zegrep="zegrep --color"
 alias zfgrep="zfgrep --color"
 alias be="bundle exec"
+alias f="fuck"
+alias g="git"
+alias k="kubectl"
+alias y="yadm"
 
 eval "$(thefuck --alias)"
 
