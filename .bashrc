@@ -38,6 +38,10 @@ if which brew > /dev/null && [[ -f "$(brew --prefix)/opt/google-cloud-sdk/comple
   source "$(brew --prefix)/opt/google-cloud-sdk/completion.bash.inc"
 fi
 
+if [[ -f "${HOME}/.bashrc.d/gke.sh" ]]; then
+  source "${HOME}/.bashrc.d/gke.sh"
+fi
+
 if [[ -e "${HOME}/.iterm2_shell_integration.bash" ]]; then
   source "${HOME}/.iterm2_shell_integration.bash"
 fi
