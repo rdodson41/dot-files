@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Upgrade outdated casks and outdated, unpinned formulae using the same options
+# they were originally installed with, plus any appended brew formula options.
+if which brew > /dev/null; then
+  brew upgrade
+fi
+
+# Update Vim plugins.
+vim -c PlugUpdate -c quitall
