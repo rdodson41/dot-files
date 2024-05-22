@@ -2,12 +2,12 @@
 
 # Install macOS package manager Homebrew.
 if [[ "$(uname)" == "Darwin" ]] && ! which brew > /dev/null; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install all dependencies in the global Brewfile.
 if which brew > /dev/null; then
-  brew bundle install --no-upgrade --global
+  brew bundle install --global --no-upgrade
 fi
 
 # Install Vim plugin manager 'vim-plug'.

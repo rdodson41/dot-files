@@ -3,6 +3,10 @@
 export GPG_TTY="$(tty)"
 export NVM_DIR="${HOME}/.nvm"
 
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 alias -- -="cd -"
 alias -- ..="cd .."
 alias ls="ls -FGhlT"
