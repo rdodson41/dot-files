@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH="${PATH}:${HOME}/Library/Python/3.9/bin"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export GPG_TTY="$(tty)"
 export NVM_DIR="${HOME}/.nvm"
 
