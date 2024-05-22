@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+export PATH="${PATH}:${HOME}/Library/Python/3.9/bin"
 export GPG_TTY="$(tty)"
 export NVM_DIR="${HOME}/.nvm"
 
@@ -26,8 +27,8 @@ alias y="yadm"
 
 eval "$(thefuck --alias)"
 
-if which brew > /dev/null && [[ -f "$(brew --prefix)/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh" ]]; then
-  source "$(brew --prefix)/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
+if which brew > /dev/null && [[ -f "${HOME}/Library/Python/3.9/lib/python/site-packages/powerline/bindings/bash/powerline.sh" ]]; then
+  source "${HOME}/Library/Python/3.9/lib/python/site-packages/powerline/bindings/bash/powerline.sh"
 fi
 
 if which brew > /dev/null && [[ -f "$(brew --prefix)/etc/bash_completion" ]]; then
