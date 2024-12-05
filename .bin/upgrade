@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-# Upgrade outdated casks and outdated, unpinned formulae using the same options
-# they were originally installed with, plus any appended brew formula options.
+# Install and upgrade (by default) all dependencies from the Brewfile.
+#
+# Read the Brewfile from ~/.Brewfile or the HOMEBREW_BUNDLE_FILE_GLOBAL
+# environment variable, if set.
 if which brew > /dev/null; then
-  brew upgrade
+  brew bundle install --global
 fi
 
 # Update Vim plugins.
