@@ -15,15 +15,12 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set runtimepath+=~/Library/Python/3.9/lib/python/site-packages/powerline/bindings/vim
 
 nnoremap <Leader><Esc> :nohlsearch<Enter>
 
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#begin()
   Plug 'altercation/vim-colors-solarized'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
   Plug 'shumphrey/fugitive-gitlab.vim'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
@@ -34,14 +31,3 @@ endif
 if filereadable(glob('~/.vim/plugged/vim-colors-solarized/colors/solarized.vim'))
   colorscheme solarized
 endif
-
-autocmd VimEnter * call s:initialize_powerline()
-
-function s:initialize_powerline()
-  if exists('g:powerline_loaded')
-    set laststatus=2
-    set noshowmode
-  else
-    set ruler
-  endif
-endfunction
