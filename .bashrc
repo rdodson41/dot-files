@@ -54,10 +54,6 @@ if [[ -f "${HOME}/.bashrc.d/gke.sh" ]]; then
   source "${HOME}/.bashrc.d/gke.sh"
 fi
 
-if [[ -e "${HOME}/.iterm2_shell_integration.bash" ]]; then
-  source "${HOME}/.iterm2_shell_integration.bash"
-fi
-
 if [[ -f "${HOME}/.fzf.bash" ]]; then
   source "${HOME}/.fzf.bash"
 fi
