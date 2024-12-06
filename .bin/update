@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# Fetch the newest version of Homebrew and all formulae from GitHub using 'git'
+# Fetch the newest version of Homebrew and all formulae from GitHub using git(1)
 # and perform any necessary migrations.
-if which brew > /dev/null; then
-  brew update
-fi
+brew update
 
 # Upgrade Vim plugin manager 'vim-plug'.
 vim -c PlugUpgrade -c quitall

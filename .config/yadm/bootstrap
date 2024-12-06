@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-# Install macOS package manager Homebrew.
-if [[ "$(uname)" == "Darwin" ]] && ! which brew > /dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+# Install Homebrew.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install and upgrade (by default) all dependencies from the Brewfile.
 #
@@ -12,9 +10,7 @@ fi
 #
 # install does not run brew upgrade on outdated dependencies. Note they may
 # still be upgraded by brew install if needed.
-if which brew > /dev/null; then
-  brew bundle install --global --no-upgrade
-fi
+brew bundle install --global --no-upgrade
 
 # Install Vim plugin manager 'vim-plug'.
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

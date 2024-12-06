@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-# Remove stale lock files and outdated downloads for all Homebrew formulae and
-# casks, and remove old versions of installed formulae.
-if which brew > /dev/null; then
-  brew cleanup -s
-fi
+# Remove stale lock files and outdated downloads for all formulae and casks, and
+# remove old versions of installed formulae.
+#
+# Scrub the cache, including downloads for even the latest versions. Note that
+# downloads for any installed formulae or casks will still not be deleted.
+brew cleanup --scrub
 
 # Remove unlisted Vim plugins.
 vim -c PlugClean -c quitall
