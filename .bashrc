@@ -18,6 +18,9 @@ eval "$(rbenv init - --no-rehash bash)"
 
 eval "$(pyenv init -)"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
   source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 fi

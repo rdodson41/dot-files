@@ -21,6 +21,8 @@ nnoremap <Leader><Esc> :nohlsearch<Enter>
 if filereadable(glob('~/.vim/autoload/plug.vim'))
   call plug#begin()
   Plug 'altercation/vim-colors-solarized'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   Plug 'shumphrey/fugitive-gitlab.vim'
   Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-fugitive'
