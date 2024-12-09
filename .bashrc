@@ -2,6 +2,11 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export GPG_TTY="$(tty)"
+export PYENV_ROOT="${HOME}/.pyenv"
+
+if command -v pyenv > /dev/null; then
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+fi
 
 alias ls="ls -FGhlT"
 
@@ -10,3 +15,5 @@ eval "$(/usr/local/bin/brew shellenv)"
 
 # Added by `rbenv init` on Sun Dec  8 20:49:37 CST 2024
 eval "$(rbenv init - --no-rehash bash)"
+
+eval "$(pyenv init -)"
