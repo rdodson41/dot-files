@@ -21,3 +21,7 @@ eval "$(pyenv init -)"
 if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
   source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 fi
+
+if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/z.sh" ]]; then
+  source "${HOMEBREW_PREFIX}/etc/profile.d/z.sh"
+fi
