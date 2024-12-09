@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Install Homebrew.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install and upgrade (by default) all dependencies from the Brewfile.
+#
+# Read the Brewfile from ~/.Brewfile or the HOMEBREW_BUNDLE_FILE_GLOBAL
+# environment variable, if set.
+brew bundle install --global
