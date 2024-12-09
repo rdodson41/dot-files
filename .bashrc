@@ -17,3 +17,7 @@ eval "$(/usr/local/bin/brew shellenv)"
 eval "$(rbenv init - --no-rehash bash)"
 
 eval "$(pyenv init -)"
+
+if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+  source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+fi
