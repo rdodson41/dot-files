@@ -1,0 +1,74 @@
+{
+  "groups": {
+    "gitstatus": {
+      "fg": "solarized:base1",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_branch": {
+      "fg": "solarized:base1",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_branch_clean": {
+      "fg": "solarized:green",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_branch_dirty": {
+      "fg": "solarized:yellow",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_branch_detached": {
+      "fg": "solarized:yellow",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_tag": {
+      "fg": "solarized:yellow",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_behind": {
+      "fg": "solarized:base1",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_ahead": {
+      "fg": "solarized:base1",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_staged": {
+      "fg": "solarized:green",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_unmerged": {
+      "fg": "solarized:red",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_changed": {
+      "fg": "solarized:red",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_untracked": {
+      "fg": "solarized:red",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus_stashed": {
+      "fg": "solarized:blue",
+      "bg": "solarized:base02",
+      "attrs": []
+    },
+    "gitstatus:divider": {
+      "fg": "solarized:base1",
+      "bg": "solarized:base02",
+      "attrs": []
+    }
+  }
+}

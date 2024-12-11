@@ -28,3 +28,7 @@ fi
 if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/z.sh" ]]; then
   source "${HOMEBREW_PREFIX}/etc/profile.d/z.sh"
 fi
+
+if [[ -r "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh" ]]; then
+  source "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh"
+fi

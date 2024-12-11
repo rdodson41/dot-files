@@ -1,0 +1,11 @@
+{
+  "ext": {
+    "shell": {
+      "colorscheme": "solarized",
+      "theme": "default"
+    },
+    "vim": {
+      "colorscheme": "solarized"
+    }
+  }
+}

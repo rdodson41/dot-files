@@ -1,0 +1,9 @@
+{
+  "segment_data": {
+    "gitstatus": {
+      "args": {
+        "show_tag": "exact"
+      }
+    }
+  }
+}
