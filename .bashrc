@@ -39,6 +39,16 @@ if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/z.sh" ]]; then
   source "${HOMEBREW_PREFIX}/etc/profile.d/z.sh"
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [[ -f "${HOME}/google-cloud-sdk/path.bash.inc" ]]; then
+  source "${HOME}/google-cloud-sdk/path.bash.inc"
+fi
+
+# The next line enables shell command completion for gcloud.
+if [[ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]]; then
+  source "${HOME}/google-cloud-sdk/completion.bash.inc"
+fi
+
 if [[ -r "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh" ]]; then
   source "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh"
 fi
