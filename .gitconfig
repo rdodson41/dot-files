@@ -1,4 +1,6 @@
 [commit]
 	gpgSign = true
+[init]
+	defaultBranch = main
 [user]
 	name = Richard E. Dodson
