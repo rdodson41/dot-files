@@ -12,6 +12,9 @@
 	gpgSign = true
 [core]
 	excludesFile = ~/.gitignore
+[fetch]
+	prune = true
+	pruneTags = true
 [init]
 	defaultBranch = main
 [user]
