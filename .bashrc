@@ -50,6 +50,10 @@ if [[ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]]; then
   source "${HOME}/google-cloud-sdk/completion.bash.inc"
 fi
 
+if [[ -f "${HOME}/.bashrc.d/gke.sh" ]]; then
+  source "${HOME}/.bashrc.d/gke.sh"
+fi
+
 if [[ -r "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh" ]]; then
   source "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh"
 fi
