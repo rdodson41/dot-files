@@ -2,9 +2,12 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export GPG_TTY="$(tty)"
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 alias la="ls -A"
 alias ls="ls -FGhlT"
+alias k="kubectl"
+alias be="bundle exec"
 
 if command -v /opt/homebrew/bin/brew > /dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
