@@ -30,6 +30,14 @@ if command -v python > /dev/null; then
   export PATH="$(python -m site --user-base)/bin:${PATH}"
 fi
 
+if command -v go > /dev/null; then
+  eval "$(go env)"
+fi
+
+if [[ -n "${GOPATH}" ]]; then
+  export PATH="${PATH}:${GOPATH}/bin"
+fi
+
 # Set up fzf key bindings and fuzzy completion
 if command -v fzf > /dev/null; then
   eval "$(fzf --bash)"
@@ -57,6 +65,6 @@ if [[ -f "${HOME}/.bashrc.d/gke.sh" ]]; then
   source "${HOME}/.bashrc.d/gke.sh"
 fi
 
-if [[ -r "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh" ]]; then
-  source "$(pip show powerline-status | awk '/^Location:/ { print($2) }')/powerline/bindings/bash/powerline.sh"
+if [[ -f "${HOME}/.bashrc.d/powerline-go.sh" ]]; then
+  source "${HOME}/.bashrc.d/powerline-go.sh"
 fi
