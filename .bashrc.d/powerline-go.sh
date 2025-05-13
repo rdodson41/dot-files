@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -theme solarized-dark16)"
+    export COLORBG="$(colorbg)"
+
+    PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -theme "solarized-${COLORBG:-dark}16")"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for

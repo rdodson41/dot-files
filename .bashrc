@@ -61,6 +61,10 @@ if [[ -f "${HOME}/google-cloud-sdk/completion.bash.inc" ]]; then
   source "${HOME}/google-cloud-sdk/completion.bash.inc"
 fi
 
+if [[ -f "${HOME}/.bashrc.d/colorbg.sh" ]]; then
+  source "${HOME}/.bashrc.d/colorbg.sh"
+fi
+
 if [[ -f "${HOME}/.bashrc.d/gke.sh" ]]; then
   source "${HOME}/.bashrc.d/gke.sh"
 fi
