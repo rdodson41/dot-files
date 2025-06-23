@@ -38,6 +38,10 @@ if [[ -n "${GOPATH}" ]]; then
   export PATH="${PATH}:${GOPATH}/bin"
 fi
 
+if [[ -f "${HOME}/.cargo/env" ]]; then
+  source "${HOME}/.cargo/env"
+fi
+
 # Set up fzf key bindings and fuzzy completion
 if command -v fzf > /dev/null; then
   eval "$(fzf --bash)"
