@@ -12,6 +12,7 @@
 	gpgSign = true
 [core]
 	excludesFile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RF
 [fetch]
 	prune = true
 	pruneTags = true
@@ -19,3 +20,5 @@
 	defaultBranch = main
 [user]
 	name = Richard E. Dodson
+[interactive]
+	diffFilter = diff-so-fancy --patch
