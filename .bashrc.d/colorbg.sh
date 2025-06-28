@@ -29,3 +29,5 @@ function colorbg {
     echo 'light'
   fi
 }
+
+export COLORBG="$(colorbg)"
