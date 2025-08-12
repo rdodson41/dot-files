@@ -18,7 +18,7 @@
 	pruneTags = true
 [init]
 	defaultBranch = main
-[user]
-	name = Richard E. Dodson
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[user]
+	name = Richard E. Dodson
